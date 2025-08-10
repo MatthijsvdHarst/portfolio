@@ -1,0 +1,14 @@
+---
+---
+<footer class="sticky bottom-0 bg-white shadow mt-8">
+  <div class="container py-4 text-center">
+    <span id="clock"></span>
+  </div>
+  <script is:inline>
+    const update = () => {
+      document.getElementById('clock').textContent = new Date().toLocaleTimeString();
+    };
+    update();
+    setInterval(update, 1000);
+  </script>
+</footer>
