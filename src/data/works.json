@@ -1,18 +1,32 @@
 [
   {
-    "slug": "project-one",
-    "title": "Project One",
-    "subtitle": "An amazing first project",
-    "image": "https://via.placeholder.com/800x450",
-    "description": "Case study for Project One",
-    "body": "Detailed information about Project One."
+    "title": "Sample Project One",
+    "slug": "sample-project-one",
+    "excerpt": "First sample project excerpt.",
+    "year": 2023,
+    "role": "Developer",
+    "special": true,
+    "thumbnail": "/images/sample1.jpg",
+    "body": "Detailed description for Sample Project One."
   },
   {
-    "slug": "project-two",
-    "title": "Project Two",
-    "subtitle": "Another fantastic project",
-    "image": "https://via.placeholder.com/800x450",
-    "description": "Case study for Project Two",
-    "body": "Detailed information about Project Two."
+    "title": "Sample Project Two",
+    "slug": "sample-project-two",
+    "excerpt": "Second sample project excerpt.",
+    "year": 2022,
+    "role": "Designer",
+    "special": false,
+    "thumbnail": "/images/sample2.jpg",
+    "body": "Detailed description for Sample Project Two."
+  },
+  {
+    "title": "Sample Project Three",
+    "slug": "sample-project-three",
+    "excerpt": "Third sample project excerpt.",
+    "year": 2021,
+    "role": "Product Manager",
+    "special": false,
+    "thumbnail": "/images/sample3.jpg",
+    "body": "Detailed description for Sample Project Three."
   }
 ]
