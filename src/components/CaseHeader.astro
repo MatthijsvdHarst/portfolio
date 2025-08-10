@@ -1,7 +1,7 @@
 ---
 const { title, subtitle } = Astro.props;
 ---
-<header class="bg-gray-100 py-16 text-center" data-reveal>
-  <h1 class="mb-2 text-3xl font-bold">{title}</h1>
+<header class="bg-gray-100 py-16 text-center">
+  <h1 data-reveal class="mb-2 text-3xl font-bold">{title}</h1>
   {subtitle && <p class="text-lg text-gray-600">{subtitle}</p>}
 </header>

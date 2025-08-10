@@ -1,18 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-        entry.target.classList.remove('opacity-0', 'translate-y-4');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-  document.querySelectorAll('[data-reveal]').forEach((el) => {
-    el.classList.add('opacity-0', 'translate-y-4', 'transition', 'duration-700');
-    observer.observe(el);
+export default function reveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.batch('[data-reveal]', {
+    start: 'top 85%',
+    onEnter: (batch) =>
+      gsap.fromTo(
+        batch,
+        { opacity: 0, y: 12 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          stagger: 0.08,
+        }
+      ),
   });
-});
+}
