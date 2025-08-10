@@ -6,6 +6,9 @@ import FeatureList from '../components/FeatureList.astro';
 import WorkGrid from '../components/WorkGrid.astro';
 import works from '../data/works.json';
 
+const title = 'Home';
+const description = 'Welcome to my portfolio';
+
 const features = [
   { title: 'Fast', text: 'Astro loads fast.' },
   { title: 'Modern', text: 'Built with the modern web.' },
@@ -19,7 +22,7 @@ const work = works.map((w) => ({
 
 ---
 
-<Base title="Home" description="Welcome to my portfolio">
+<Base {title} {description}>
   <Hero />
   <SectionIntro title="Features" intro="Why this portfolio rocks" />
   <FeatureList features={features} />
