@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "project-one",
+    "title": "Project One",
+    "subtitle": "An amazing first project",
+    "image": "https://via.placeholder.com/800x450",
+    "description": "Case study for Project One",
+    "body": "Detailed information about Project One."
+  },
+  {
+    "slug": "project-two",
+    "title": "Project Two",
+    "subtitle": "Another fantastic project",
+    "image": "https://via.placeholder.com/800x450",
+    "description": "Case study for Project Two",
+    "body": "Detailed information about Project Two."
+  }
+]
