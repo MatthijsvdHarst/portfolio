@@ -1,8 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import SectionIntro from '../components/SectionIntro.astro';
+
+const title = 'About';
+const description = 'Learn more about me';
 ---
-<Base title="About" description="Learn more about me">
+<Base {title} {description}>
   <SectionIntro title="About" intro="Who I am" />
   <div class="prose mx-auto max-w-3xl py-8">
     <p>This is a brief description about the portfolio owner.</p>

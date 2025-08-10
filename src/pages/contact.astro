@@ -1,7 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const title = 'Contact';
+const description = 'Get in touch';
 ---
-<Base title="Contact" description="Get in touch">
+<Base {title} {description}>
   <div class="flex min-h-[60vh] items-center justify-center">
     <a href="mailto:hello@example.com" class="rounded bg-blue-600 px-8 py-4 text-white">Email me</a>
   </div>

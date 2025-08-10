@@ -3,12 +3,15 @@ import Base from '../../layouts/Base.astro';
 import WorkGrid from '../../components/WorkGrid.astro';
 import works from '../../data/works.json';
 
+const title = 'Work';
+const description = 'A selection of my projects';
+
 const items = works.map((work) => ({
   title: work.title,
   thumbnail: work.thumbnail,
   href: `/work/${work.slug}/`
 }));
 ---
-<Base title="Work" description="A selection of my projects">
+<Base {title} {description}>
   <WorkGrid items={items} />
 </Base>

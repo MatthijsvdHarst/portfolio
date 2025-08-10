@@ -13,8 +13,13 @@ const work = works.find((w) => w.slug === slug);
 if (!work) {
   throw new Error(`Work not found: ${slug}`);
 }
+
+const title = work.title;
+const description =
+  work.excerpt.length > 160 ? `${work.excerpt.slice(0, 157)}...` : work.excerpt;
+const image = work.thumbnail;
 ---
-<Base title={work.title} description={work.excerpt}>
+<Base {title} {description} image={image}>
   <CaseHeader title={work.title} subtitle={`${work.year} • ${work.role}`} />
   <img src={work.thumbnail} alt={work.title} class="aspect-[3/2] w-full object-cover" />
   <div class="prose mx-auto max-w-3xl py-8">
