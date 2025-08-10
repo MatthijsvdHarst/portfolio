@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import CaseHeader from '../../components/CaseHeader.astro';
+import works from '../../data/works.json';
+
+export async function getStaticPaths() {
+  return works.map((work) => ({ params: { slug: work.slug } }));
+}
+
+const { slug } = Astro.params;
+const work = works.find((w) => w.slug === slug);
+
+if (!work) {
+  throw new Error(`Work not found: ${slug}`);
+}
+---
+<Base title={work.title} description={work.description}>
+  <CaseHeader title={work.title} subtitle={work.subtitle} />
+  <img src={work.image} alt={work.title} class="aspect-[16/9] w-full object-cover" />
+  <div class="prose mx-auto max-w-3xl py-8">
+    <p>{work.body}</p>
+  </div>
+</Base>

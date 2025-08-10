@@ -4,22 +4,22 @@ import Hero from '../components/Hero.astro';
 import SectionIntro from '../components/SectionIntro.astro';
 import FeatureList from '../components/FeatureList.astro';
 import WorkGrid from '../components/WorkGrid.astro';
+import works from '../data/works.json';
 
 const features = [
   { title: 'Fast', text: 'Astro loads fast.' },
   { title: 'Modern', text: 'Built with the modern web.' },
   { title: 'Flexible', text: 'Fits any stack.' }
 ];
-
-const work = [
-  { title: 'Project One', image: 'https://via.placeholder.com/400x300', href: '#' },
-  { title: 'Project Two', image: 'https://via.placeholder.com/400x300', href: '#' },
-  { title: 'Project Three', image: 'https://via.placeholder.com/400x300', href: '#' }
-];
+const work = works.map((w) => ({
+  title: w.title,
+  image: w.image,
+  href: `/work/${w.slug}/`
+}));
 
 ---
 
-<Base>
+<Base title="Home" description="Welcome to my portfolio">
   <Hero />
   <SectionIntro title="Features" intro="Why this portfolio rocks" />
   <FeatureList features={features} />
