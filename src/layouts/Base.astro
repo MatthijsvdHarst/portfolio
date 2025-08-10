@@ -2,8 +2,6 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import FooterClock from "../components/FooterClock.astro";
-import reveal from "../components/reveal.js";
-
 const { title = "Astro Basics", description } = Astro.props;
 ---
 <!doctype html>
@@ -23,7 +21,7 @@ const { title = "Astro Basics", description } = Astro.props;
       <slot />
     </main>
     <FooterClock />
-    <script is:inline>{reveal}</script>
+    <script type="module" src="/reveal-init.js"></script>
   </body>
 </html>
 
