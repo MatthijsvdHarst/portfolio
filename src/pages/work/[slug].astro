@@ -16,7 +16,7 @@ if (!work) {
 ---
 <Base title={work.title} description={work.excerpt}>
   <CaseHeader title={work.title} subtitle={`${work.year} • ${work.role}`} />
-  <img src={work.thumbnail} alt="Placeholder" class="aspect-[3/2] w-full object-cover" />
+  <img src={work.thumbnail} alt="{work.title}" class="aspect-[3/2] w-full object-cover" />
   <div class="prose mx-auto max-w-3xl py-8">
     <p>{work.body}</p>
   </div>
