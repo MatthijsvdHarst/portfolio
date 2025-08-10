@@ -32,10 +32,22 @@
   p {
     @apply leading-7;
   }
+  :focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-neutral-800;
+  }
 }
 
 @layer utilities {
   .container {
     @apply mx-auto max-w-screen-xl px-6 md:px-8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

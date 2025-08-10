@@ -1,7 +1,13 @@
 ---
 ---
 <div class="md:hidden">
-  <button id="menu-btn" class="rounded p-2 focus:outline-none focus:ring">
+  <button
+    id="menu-btn"
+    class="rounded p-2"
+    aria-label="Open navigation"
+    aria-controls="mobile-nav"
+    aria-expanded="false"
+  >
     <span class="sr-only">Toggle navigation</span>
     ☰
   </button>
@@ -13,5 +19,9 @@
 <script is:inline>
   const btn = document.getElementById('menu-btn');
   const nav = document.getElementById('mobile-nav');
-  btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+  btn?.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    nav.classList.toggle('hidden');
+  });
 </script>
