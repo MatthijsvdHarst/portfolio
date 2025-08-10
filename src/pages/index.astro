@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import SectionIntro from '../components/SectionIntro.astro';
+import FeatureList from '../components/FeatureList.astro';
+import WorkGrid from '../components/WorkGrid.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const features = [
+  { title: 'Fast', text: 'Astro loads fast.' },
+  { title: 'Modern', text: 'Built with the modern web.' },
+  { title: 'Flexible', text: 'Fits any stack.' }
+];
+
+const work = [
+  { title: 'Project One', image: 'https://via.placeholder.com/400x300', href: '#' },
+  { title: 'Project Two', image: 'https://via.placeholder.com/400x300', href: '#' },
+  { title: 'Project Three', image: 'https://via.placeholder.com/400x300', href: '#' }
+];
+
 ---
 
 <Base>
-        <Welcome />
+  <Hero />
+  <SectionIntro title="Features" intro="Why this portfolio rocks" />
+  <FeatureList features={features} />
+  <SectionIntro title="Work" intro="Selected projects" />
+  <WorkGrid items={work} />
 </Base>

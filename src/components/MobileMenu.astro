@@ -1,0 +1,17 @@
+---
+---
+<div class="md:hidden">
+  <button id="menu-btn" class="rounded p-2 focus:outline-none focus:ring">
+    <span class="sr-only">Toggle navigation</span>
+    ☰
+  </button>
+  <nav id="mobile-nav" class="mt-2 hidden flex-col gap-2">
+    <a href="#work" class="block rounded px-2 py-1 hover:bg-gray-100 focus:bg-gray-100">Work</a>
+    <a href="#about" class="block rounded px-2 py-1 hover:bg-gray-100 focus:bg-gray-100">About</a>
+  </nav>
+</div>
+<script is:inline>
+  const btn = document.getElementById('menu-btn');
+  const nav = document.getElementById('mobile-nav');
+  btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+</script>

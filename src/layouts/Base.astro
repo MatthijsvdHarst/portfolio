@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import FooterClock from "../components/FooterClock.astro";
+import reveal from "../components/reveal.js";
 ---
 <!doctype html>
 <html lang="en">
@@ -19,6 +20,7 @@ import FooterClock from "../components/FooterClock.astro";
       <slot />
     </main>
     <FooterClock />
+    <script is:inline>{reveal}</script>
   </body>
 </html>
 
