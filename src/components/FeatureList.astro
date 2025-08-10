@@ -1,0 +1,11 @@
+---
+const { features = [] } = Astro.props;
+---
+<ul class="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+  {features.map((f) => (
+    <li class="rounded border p-4 hover:shadow focus-within:shadow" data-reveal>
+      <h3 class="font-medium">{f.title}</h3>
+      <p class="text-sm text-gray-600">{f.text}</p>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,9 @@
+---
+import WorkCard from './WorkCard.astro';
+const { items = [] } = Astro.props;
+---
+<section id="work" class="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+  {items.map((item) => (
+    <WorkCard {...item} />
+  ))}
+</section>

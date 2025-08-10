@@ -1,7 +1,13 @@
 ---
+import MobileMenu from './MobileMenu.astro';
 ---
-<nav class="sticky top-0 bg-white shadow">
-  <div class="container py-4">
-    <a href="/" class="font-semibold">Home</a>
+<header class="sticky top-0 z-50 bg-white shadow">
+  <div class="mx-auto flex max-w-5xl items-center justify-between p-4">
+    <a href="/" class="font-bold">Home</a>
+    <nav class="hidden gap-4 md:flex">
+      <a href="#work" class="hover:text-blue-600 focus:text-blue-600">Work</a>
+      <a href="#about" class="hover:text-blue-600 focus:text-blue-600">About</a>
+    </nav>
+    <MobileMenu />
   </div>
-</nav>
+</header>
